@@ -18,8 +18,11 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "test": "node --import tsx --test test/credit.test.ts",
+    "test": "node --import tsx --test test/credit.test.ts test/scheduler.test.ts",
+    "test:credit": "node --import tsx --test test/credit.test.ts",
+    "test:scheduler": "node --import tsx --test test/scheduler.test.ts",
     "start": "tsx src/local.ts",
+    "cron": "tsx src/cron.ts",
     "build": "esbuild src/handler.ts --bundle --platform=node --target=node20 --format=cjs --outfile=dist/index.js --external:@aws-sdk/*",
     "package": "npm run build && cd dist && zip -q -r ../function.zip index.js && echo '已生成 function.zip'"
   },
