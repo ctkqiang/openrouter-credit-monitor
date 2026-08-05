@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-sns": "^3.700.0",
-    "undici": "^6.21.0"
+    "undici": "^6.28.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
